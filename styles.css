@@ -30,11 +30,11 @@ header {
   background-color: #6c4f3d;
   color: white;
   padding: 20px 0;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 header .logo img {
-  max-width: 50px;
+  max-width: 150px;
 }
 
 nav ul {
@@ -84,7 +84,7 @@ nav ul li .dropdown li a {
   background-image: url("images/wheat.jpg"); 
   width: 100%; 
   height: 300px; 
-  background-color: #f4a300;
+  /*background-color: #f4a300;*/
   color: white;
   padding: 40px 0;
   text-align: center;
