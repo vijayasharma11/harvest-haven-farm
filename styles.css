@@ -323,6 +323,12 @@ nav ul li a:hover {
   font-size: 1.2em;
 }
 
+.category img {
+  width: 80%;
+  height: 180px;
+}
+
+
 /* Featured Items Styles */
 #featured-items {
   background-color: #f9f9f9;
