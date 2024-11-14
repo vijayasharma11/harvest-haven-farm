@@ -10,11 +10,10 @@ header .logo img {
 }
 
 body {
-  /* background-color: rgb(246, 250, 225); */
+  background-color: lightyellow;
   font-family: 'Arial', sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  background-color: #f4f4f4;
   color: #333;
 }
 
