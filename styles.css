@@ -623,6 +623,74 @@ h1 {
   text-align: center;
 }
 
+/* Cafe_menu */
+
+.menu-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.menu-category {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+  border-bottom: 2px solid #5baf5b;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-name {
+  font-size: 1.2em;
+}
+
+.item-price {
+  font-size: 1.2em;
+  color: #5baf5b;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-container {
+      width: 95%;
+  }
+
+  header h1 {
+      font-size: 2.5em;
+  }
+
+  header p {
+      font-size: 1em;
+  }
+
+  .menu-category h2 {
+      font-size: 1.6em;
+  }
+
+}
+  
+  
+
 
 
 
