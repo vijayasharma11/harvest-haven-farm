@@ -3,92 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cafe Menu Order</title>
+    <title>Farm Cafe Order Menu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="order-container">
-        <header>
-            <h1>Farm Cafe - Order Menu</h1>
-            <p>Select your items and place your order!</p>
-        </header>
 
-        <!-- Menu Section -->
-        <section class="menu">
-            <h2>Our Menu</h2>
-            
-            <!-- Breakfast Menu -->
-            <div class="menu-category">
-                <h3>Breakfast</h3>
-                <label for="breakfast1">Classic English Breakfast</label>
-                <input type="number" id="breakfast1" name="breakfast1" min="0" value="0">
-                <span>£7.50</span>
-                
-                <label for="breakfast2">Pancakes with Maple Syrup</label>
-                <input type="number" id="breakfast2" name="breakfast2" min="0" value="0">
-                <span>£5.50</span>
-                
-                <label for="breakfast3">Avocado Toast</label>
-                <input type="number" id="breakfast3" name="breakfast3" min="0" value="0">
-                <span>£6.00</span>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Abbington Farm Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="Cafe-menu.html">Cafe</a></li>
+                <li><a href="photos.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <div class="container">
+            <h2>Our Delicious Menu</h2>
+            <p>Explore our farm-fresh offerings made with locally sourced ingredients!</p>
+
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item">
+                    <img src="images/farmhouse_breakfast.jpg" alt="Farmhouse Breakfast">
+                    <h2>Farmhouse Breakfast</h2>
+                    <p>A hearty plate of scrambled eggs, bacon, toast, and seasonal vegetables.</p>
+                    <input type="number" id="item1" name="item1" min="0" step="1" value="0" max="10">
+                    <p class="price">$10.99</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="menu-item">
+                    <img src="images/farm_burger.jpg" alt="Farm Burger">
+                    <h2>Farm Burger</h2>
+                    <p>100% grass-fed beef patty with lettuce, tomato, and our homemade sauce.</p>
+                    <input type="number" id="item2" name="item2" min="0" step="1" value="0" max="10">
+                    <p class="price">$12.99</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="menu-item">
+                    <img src="images/seasonal_salad.jpg" alt="Seasonal Salad">
+                    <h2>Seasonal Salad</h2>
+                    <p>A fresh mix of seasonal greens, tomatoes, and homemade dressing.</p>
+                    <input type="number" id="item3" name="item3" min="0" step="1" value="0" max="10">
+                    <p class="price">$8.99</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="menu-item">
+                    <img src="images/homemade_apple_pie.jpg" alt="Homemade Apple Pie">
+                    <h2>Homemade Apple Pie</h2>
+                    <p>Warm, flaky pastry filled with locally grown apples. Served with a scoop of vanilla ice cream.</p>
+                    <input type="number" id="item4" name="item4" min="0" step="1" value="0" max="10">
+                    <p class="price">$4.99</p>
+                </div>
             </div>
 
-            <!-- Drinks Menu -->
-            <div class="menu-category">
-                <h3>Drinks</h3>
-                <label for="drink1">Freshly Brewed Coffee</label>
-                <input type="number" id="drink1" name="drink1" min="0" value="0">
-                <span>£2.50</span>
-                
-                <label for="drink2">Latte</label>
-                <input type="number" id="drink2" name="drink2" min="0" value="0">
-                <span>£3.00</span>
-                
-                <label for="drink3">Organic Tea</label>
-                <input type="number" id="drink3" name="drink3" min="0" value="0">
-                <span>£2.00</span>
-                
-                <label for="drink4">Fresh Juice</label>
-                <input type="number" id="drink4" name="drink4" min="0" value="0">
-                <span>£2.80</span>
+            <!-- Order Form -->
+            <div>
+                <h2>Place Your Order</h2>
+                <form id="order-form" onsubmit="return submitOrder()">
+                    <!-- Customer Information -->
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+
+                    <!-- Special Instructions -->
+                    <div class="form-group">
+                        <label for="instructions">Special Instructions:</label>
+                        <textarea id="instructions" name="instructions" rows="4" placeholder="Any special requests?"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Place Order</button>
+                </form>
             </div>
 
-            <!-- Snacks Menu -->
-            <div class="menu-category">
-                <h3>Snacks</h3>
-                <label for="snack1">Homemade Cake of the Day</label>
-                <input type="number" id="snack1" name="snack1" min="0" value="0">
-                <span>£3.50</span>
-                
-                <label for="snack2">Soup of the Day</label>
-                <input type="number" id="snack2" name="snack2" min="0" value="0">
-                <span>£4.00</span>
-                
-                <label for="snack3">Sandwiches</label>
-                <input type="number" id="snack3" name="snack3" min="0" value="0">
-                <span>£4.50</span>
+            <!-- Order Summary (hidden by default) -->
+            <div id="order-summary" style="display: none;">
+                <h3>Order Confirmation</h3>
+                <div id="order-details"></div>
+                <p><strong>Total: $<span id="total-price"></span></strong></p>
             </div>
-        </section>
 
-        <!-- Order Form Section -->
-        <section class="order-form">
-            <h2>Your Order</h2>
-            <form id="order-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="address">Delivery Address:</label>
-                <textarea id="address" name="address" required></textarea>
-                
-                <button type="submit">Place Order</button>
-            </form>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Farm Fun | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function submitOrder() {
+            // Prevent form from submitting to server
+            event.preventDefault();
+
+            // Get customer details
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const instructions = document.getElementById('instructions').value;
+
+            // Get item quantities
+            const item1Qty = parseInt(document.getElementById('item1').value);
+            const item2Qty = parseInt(document.getElementById('item2').value);
+            const item3Qty = parseInt(document.getElementById('item3').value);
+            const item4Qty = parseInt(document.getElementById('item4').value);
+
+            // Prices of items
+            const item1Price = 10.99;
+            const item2Price = 12.99;
+            const item3Price = 8.99;
+            const item4Price = 4.99;
+
+            // Calculate total price
+            const totalPrice = (item1Qty * item1Price) + (item2Qty * item2Price) + (item3Qty * item3Price) + (item4Qty * item4Price);
+
+            // Generate order details
+            let orderDetails = `<p><strong>Name:</strong> ${name}</p>`;
+            orderDetails += `<p><strong>Email:</strong> ${email}</p>`;
+            orderDetails += `<p><strong>Phone:</strong> ${phone}</p>`;
+            orderDetails += `<h3>Items Ordered:</h3><ul>`;
+
+            if (item1Qty > 0) {
+                orderDetails += `<li>${item1Qty} x Farmhouse Breakfast ($${(item1Qty * item1Price).toFixed(2)})</li>`;
+            }
+            if (item2Qty > 0) {
+                orderDetails += `<li>${item2Qty} x Farm Burger ($${(item2Qty * item2Price).toFixed(2)})</li>`;
+            }
+            if (item3Qty > 0) {
+                orderDetails += `<li>${item3Qty} x Seasonal Salad ($${(item3Qty * item3Price).toFixed(2)})</li>`;
+            }
+            if (item4Qty > 0) {
+                orderDetails += `<li>${item4Qty} x Homemade Apple Pie ($${(item4Qty * item4Price).toFixed(2)})</li>`;
+            }
+
+            orderDetails += `</ul>`;
+
+            // Add special instructions if any
+            if (instructions) {
+                orderDetails += `<p><strong>Special Instructions:</strong> ${instructions}</p>`;
+            }
+
+            // Show order details and total
+            document.getElementById('order-details').innerHTML = orderDetails;
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+
+            // Show the order summary
+            document.getElementById('order-summary').style.display = 'block';
+
+            // Reset the form
+            document.getElementById('order-form').reset();
+
+            return false; // Prevent form submission
+        }
+    </script>
 </body>
 </html>
