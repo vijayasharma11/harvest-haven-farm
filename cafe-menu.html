@@ -14,7 +14,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" >Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="activities.html">Activities</a></li>
@@ -68,7 +68,7 @@
             <!-- Order Form -->
             <div>
                 <h2>Place Your Order</h2>
-                <form id="order-form" onsubmit="return submitOrder()">
+                <form id="order-form" onsubmit="return submitOrder(event)">
                     <!-- Customer Information -->
                     <div class="form-group">
                         <label for="name">Your Name:</label>
@@ -109,21 +109,21 @@
     <!-- Footer Section -->
     <footer class="footer">
       <p>&copy; 2024 Farm Fun | All Rights Reserved</p>
-      <div >
-        <a href="http://www.facebook.com" >
+      <div>
+        <a href="http://www.facebook.com">
           <img src="images/facebook.jpg" alt="facebook" height="30px" width="30px">
         </a>
-        <a href="http://www.twitter.com" >
+        <a href="http://www.twitter.com">
           <img src="images/twitter.jpg" alt="Twitter" height="30px" width="30px">
         </a>
-        <a href="http://www..com" >
-          <img src="images/instgram.jpg" alt="Instagram" height="30px" width="30px">
-        </a></a>
+        <a href="http://www.instagram.com">
+          <img src="images/instagram.jpg" alt="Instagram" height="30px" width="30px">
+        </a>
       </div>
     </footer>
 
     <script>
-        function submitOrder() {
+        function submitOrder(event) {
             // Prevent form from submitting to server
             event.preventDefault();
 
